@@ -7,8 +7,8 @@ import org.springframework.stereotype.Repository;
 
 import local.gdiaz.springfundamentals.model.Customer;
 
-@Repository
-public class FakeCustomerRepository implements CustomerRepository {
+
+public class TestCustomerRepository implements CustomerRepository {
 
 	public List<Customer> findAll() {
 		List<Customer> customers = new ArrayList<Customer>();
