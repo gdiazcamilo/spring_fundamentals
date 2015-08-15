@@ -7,10 +7,22 @@ import local.gdiaz.springfundamentals.repository.*;
 
 public class FakeCustomerService implements CustomerService {
 
-	CustomerRepository customerRepository = new FakeCustomerRepository();
+	CustomerRepository customerRepo;
 	
+	public FakeCustomerService() {
+	
+	}
+	
+	public FakeCustomerService(CustomerRepository customerRepo) {
+		this.customerRepo = customerRepo;
+	}
+	
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		this.customerRepo = customerRepository;
+	}
+
 	public List<Customer> findAll() {
-		return customerRepository.findAll();
+		return customerRepo.findAll();
 	}
 	
 }
