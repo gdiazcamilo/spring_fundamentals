@@ -1,7 +1,10 @@
 package local.gdiaz.springfundamentals.model;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Customer {
 
+	@Value("${myName}")
 	private String firstName;
 	private String lastName;
 

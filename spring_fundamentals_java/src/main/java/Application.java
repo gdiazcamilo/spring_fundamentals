@@ -13,7 +13,6 @@ public class Application {
 		CustomerService customerService = appContext.getBean("customerService", CustomerService.class);
 		customerService.setN(19);
 		
-		
 		CustomerService customerService2 = appContext.getBean("customerService", CustomerService.class);
 		System.out.println(customerService2.getN());
 		
